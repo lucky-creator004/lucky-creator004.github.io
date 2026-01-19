@@ -1,99 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Product Gallery</title>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-    margin: 0;
-    padding: 20px;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.03);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover; /* square photo */
-}
-
-.title {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 10px 0 5px;
-}
-
-.buy-btn {
-    display: inline-block;
-    margin-bottom: 12px;
-    padding: 7px 14px;
-    background: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.buy-btn:hover {
-    background: #1e7e34;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Otaku Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="products">
+<div class="container">
 
-    <!-- Product 1 -->
-    <div class="card">
-        <img src="mukkesh.jpg">
-        <div class="title">Product 1</div>
-        <a href="#" class="buy-btn">Buy</a>
-    </div>
+  <!-- PAGES -->
+  <div id="home" class="page active">
+    <img src="home.png" class="profile">
+    <h2>The Otaku</h2>
+    <p>Curated Anime Merch Finds</p>
+    <p>Best deals & links 🇮🇳</p>
+    <p>DM for collabs 🔥</p>
+  </div>
 
-    <!-- Product 2 -->
-    <div class="card">
-        <img src="mandal.jpg">
-        <div class="title">Product 2</div>
-        <a href="#" class="buy-btn">Buy</a>
-    </div>
+  <div id="message" class="page">
+    <h2>Message Me</h2>
+    <a class="btn" href="https://instagram.com/otaku.xo4" target="_blank">
+      Open Instagram DM
+    </a>
+  </div>
 
-    <!-- Product 3 -->
-    <div class="card">
-        <img src="black.jpg">
-        <div class="title">Product 3</div>
-        <a href="#" class="buy-btn">Buy</a>
-    </div>
-
-    <!-- Product 4 -->
-    <div class="card">
-        <img src="naruto.png">
-        <div class="title">Product 4</div>
-        <a href="#" class="buy-btn">Buy</a>
-    </div>
+  <div id="products" class="page">
+    <h2>Products</h2>
+    <ul>
+      <li><a href="#">Anime Hoodie</a></li>
+      <li><a href="#">Naruto Poster</a></li>
+      <li><a href="#">Action Figure</a></li>
+    </ul>
+  </div>
 
 </div>
 
+<!-- BOTTOM NAV -->
+<div class="nav">
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('message')">Message</button>
+  <button onclick="showPage('products')">Products</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
